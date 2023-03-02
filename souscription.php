@@ -13,20 +13,58 @@
                 <input name="telephone">
                 <button type="submit" name="send">inscription</button>
         </form>
-        
+        <?php
+             $db = new PDO("mysql:host=localhost;dbname=tpfinal",'root','');
+               if (isset($_POST['send']))
+                    {
+                        $pseudo=$_POST['pseudo'];
+                        $mail=$_POST['mail'];
+                        $mdp=password_hash($_POST['mdp'],PASSWORD_DEFAULT);
+                        $telephone=$_POST['telephone'];
+                    
+                    
+                        $requete='SELECT pseudo FROM users where pseudo = :pseudo';
+                        $exec=$db->prepare($requete);
+                        $exec->execute(["pseudo" => $pseudo]) ;
+                        $users= $exec ->fetchall();
+                    if (count($users)>0){
+                            echo "le pseudo existe déja";
+                    }
+                    else{
+                            $requete1="INSERT INTO users (pseudo,mail,mdp,telephone) VALUE (:pseudo,:mail,:mdp,:telephone)";
+                            $exec1=$db->prepare($requete1);
+                            $exec1->execute(["pseudo"=>$pseudo,"mail"=>$mail,"mdp"=>$mdp,"telephone"=>$telephone]) ;
+                            echo 'tous le monde';
+                            echo '<br>';
+                            $requete2='SELECT * FROM users ';
+                            $exec2=$db->prepare($requete2);
+                            $exec2->execute() ;
+                            $users2= $exec2 ->fetchall();
+                            foreach ($users2 as $user2) {
+                                echo $user2['pseudo'];
+                                echo '<br>';
+                                echo $user2['mail'];
+                                echo '<br>';
+                                echo $user2['mdp'];
+                                echo '<br>';
+                                echo $user2['telephone'];
+                                echo '<br>';
+                             }
+                    
+                        
+                    }
+        };
+    
+            ?>
         <p id="p1">
-          Bonjour madame, monsieur ,<br />
-          Sur mon site de streaming payant pour des films de la catégorie action ou drama.<br>
-          Je vous invite donc a vous renseigner sur les page dedier aux catergorie de films.<br>
-          Pour pouvoir acheter les film ils faudra que vous creier un compte sur le lien qui se nomme souscription.<br>
-          Par contre si vous vouler vous désinscrire il faudra que vous appyer sur le bouton desouscription, en vous munissant de votre e-mail et votre mot de passe pour vous désinscrire<br>
+          Bonjour veuilleiez renseigner vous coorodonnées.
         </p>
         <form>
           <button type="submit" id="bouton1"><a href="film.php" >film</button>
             <br>
           <button type="submit" id="bouton2"><a href="panier.php">panier</button>
             <br>
-          <button type="submit" id="bouton3"><a href="souscription.php">souscription</button>
+          <button type="submit" id="bouton3"><a href="Accueil.html">accueil</button>
             <br>
           <button type="submit" id="bouton4"><a href="desouscription.php">desouscription</button>
     </form>
