@@ -4,9 +4,9 @@
         <title>titre</title>
         <meta charset="utf-8" />
     </head>
-    <form action="delete.php" method="POST">
-            <input name="e-mail">
-            <button type="submit">inscription</button>
+    <form action="desouscription.php" method="POST">
+            <input name="pseudo">
+            <button type="submit">désinscription</button>
         </form>
     <body>
         <p>
@@ -15,15 +15,15 @@
         <br/> 
         <p>
             <?php
-               $db = new PDO("mysql:host=localhost;dbname=tpfinal",'root','');
-               if (isset($_POST['email'])){
-                        $email=$_POST['e-mail'];
+                   $db = new PDO("mysql:host=localhost;dbname=tpfinal",'root','');
+                   if (isset($_POST['pseudo'])){
+                            $user=$_POST['pseudo'];
+                                
+                            $requete2='DELETE FROM users WHERE pseudo = :pseudo ';
+                            $exec2=$db->prepare($requete2);
+                            $exec2->execute(["pseudo"=>$user]) ;
                             
-                        $requete='DELETE FROM users WHERE e-mail = :e-mail ';
-                        $exec=$db->prepare($requete2);
-                        $exec->execute(["e-mail"=>$email]) ;
-                        
-                        }
+                            }
 
             ?>
     <form>
