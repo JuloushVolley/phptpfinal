@@ -8,10 +8,9 @@
   <body>
     <p id="p1">
       Bonjour madame, monsieur ,<br />
-      Sur mon site de streaming payant pour des films de la catégorie action ou drama.<br>
-      Je vous invite donc a vous renseigner sur les page dedier aux catergorie de films.<br>
-      Pour pouvoir acheter les film ils faudra que vous creier un compte sur le lien qui se nomme souscription.<br>
-      Par contre si vous vouler vous désinscrire il faudra que vous appyer sur le bouton desouscription, en vous munissant de votre e-mail et votre mot de passe pour vous désinscrire<br>
+      Sur cette page vous pourrez avoir acces aux film de deux catégorie dram et action<br>
+      Chaque film aura un lien qui vous montrera une bande d'annonce et un autre qui vous montrera les autre film fait par le réalisateur.<br>
+      Chaque film coutera entre 4,55$ et 5,55$.<br>
     </p>
     <form>
       <button type="submit" id="bouton1"><a href="film.php" >film</button>
