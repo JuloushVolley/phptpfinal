@@ -8,15 +8,46 @@
   <body>
     <p id="p1">
       Bonjour madame, monsieur ,<br />
-      Sur mon site de streaming payant pour des films de la catégorie action ou drama.<br>
-      Je vous invite donc a vous renseigner sur les page dedier aux catergorie de films.<br>
-      Pour pouvoir acheter les film ils faudra que vous creier un compte sur le lien qui se nomme souscription.<br>
-      Par contre si vous vouler vous désinscrire il faudra que vous appyer sur le bouton desouscription, en vous munissant de votre e-mail et votre mot de passe pour vous désinscrire<br>
+      Bienvenu sur le panier, ici vous aller donner le chiffre du film et on affichera votre panier au fur et a mesure<br>
     </p>
+    <p>
+      <form action="panier.php" method="POST">
+            <input name="id">
+            <button type="submit" name="send">ajouter</button>
+      </form>
+    </p>
+    <?php
+      $db = new PDO("mysql:host=localhost;dbname=tpfinal",'root','');
+      if (isset($_POST['send']))
+           {
+               
+               $id=$_POST['id'];
+                              
+           
+               $requete='SELECT * FROM film where id = :id';
+               $exec=$db->prepare($requete);
+               $exec->execute(["id" => $id]) ;
+               $users= $exec ->fetchall();
+               foreach ($id as $ids) {
+                echo $user['id'];
+                echo '<br>';
+                echo $user['name'];
+                echo '<br>';
+                echo $user['description'];
+                echo '<br>';
+                echo $user['realisateur'];
+                echo '<br>';
+                echo $user['type'];
+                echo '<br>';
+                echo $user['prix'];
+                echo '<br>';
+               }
+           };
+    ?>
     <form>
       <button type="submit" id="bouton1"><a href="film.php" >film</button>
         <br>
-      <button type="submit" id="bouton2"><a href="panier.php">panier</button>
+      <button type="submit" id="bouton2"><a href="Accueil.html">panier</button>
         <br>
       <button type="submit" id="bouton3"><a href="souscription.php">souscription</button>
         <br>
