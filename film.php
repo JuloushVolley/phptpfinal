@@ -189,14 +189,14 @@
     
     </p>
   <p>
-    <form class="boutton"> 
-      <button type="submit" id="boutton"><a href="Accueil.html" >Accueil</button>
+    <form > 
+      <button type="submit" id="bouton1"><a href="Accueil.html" >Accueil</button>
         <br>
-      <button type="submit" id="boutton"><a href="panier.php">panier</button>
+      <button type="submit" id="bouton2"><a href="panier.php">panier</button>
         <br>
-      <button type="submit" id="boutton"><a href="souscription.php">souscription</button>
+      <button type="submit" id="bouton3"><a href="souscription.php">souscription</button>
         <br>
-      <button type="submit" id="boutton"><a href="desouscription.php">desouscription</button>
+      <button type="submit" id="bouton4"><a href="desouscription.php">desouscription</button>
     </form>
     </p>
   </body>
