@@ -8,7 +8,7 @@
   <body>
     <p id="p1">
       Bonjour madame, monsieur ,<br />
-      Bienvenu sur le panier, ici vous aller donner le chiffre du film et on affichera votre panier au fur et a mesure<br>
+      Bienvenu sur le panier, ici vous aller donner le chiffre du film et on affichera votre panier au fur et à mesure<br>
     </p>
     <p>
       <form action="panier.php" method="POST">
@@ -49,9 +49,9 @@
         <br>
       <button type="submit" id="bouton2"><a href="Accueil.html">panier</button>
         <br>
-      <button type="submit" id="bouton3"><a href="souscription.php">souscription</button>
+      <button type="submit" id="bouton3"><a href="souscription.php">inscription</button>
         <br>
-      <button type="submit" id="bouton4"><a href="desouscription.php">desouscription</button>
+      <button type="submit" id="bouton4"><a href="desouscription.php">désinscription</button>
     </form>
   </body>
 </html>
