@@ -54,7 +54,7 @@
       <td>4</td>
       <td><a href="https://www.youtube.com/watch?v=V-D6iFo2LeQ" ><img src="topgun.jpg" width="100%" height="100%" ></a></td>
       <td>Top Gun est un film d'action américain réalisé par Tony Scott et sorti en 1986. Il met notamment en scène dans les rôles principaux Tom Cruise, Kelly McGillis, Anthony Edwards et Val Kilmer. L'action se déroule en partie à Topgun, une école de combat aérien de la marine américaine.</td>
-      <td><a href=https://fr.wikipedia.org/wiki/Tony_Scott" >Tony Scott </td>
+      <td><a href="https://fr.wikipedia.org/wiki/Tony_Scott" >Tony Scott </td>
       <td>Action</td>
       <td>5,55$</td>
     </tr>
