@@ -7,7 +7,7 @@
   </head>
   <body>
       <form action="souscription.php" method="POST">
-                <input name="pseudo">
+                <input name="pseudo" value="pseudo">
                 <input name="mail">
                 <input name="mdp">
                 <input name="telephone">
