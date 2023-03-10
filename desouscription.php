@@ -3,6 +3,7 @@
     <head>
         <title>titre</title>
         <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="tpfinal.css" />
     </head>
     <form action="desouscription.php" method="POST">
             <input name="pseudo">
