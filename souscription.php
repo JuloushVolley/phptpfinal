@@ -66,7 +66,7 @@
             <br>
           <button type="submit" id="bouton3"><a href="Accueil.html">accueil</button>
             <br>
-          <button type="submit" id="bouton4"><a href="desouscription.php">desouscription</button>
+          <button type="submit" id="bouton4"><a href="desouscription.php">désinscription</button>
     </form>
   </body>
 </html>
