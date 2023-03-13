@@ -117,7 +117,7 @@
     <form >
       <button type="submit" id="bouton1"><a href="Accueil.html" >Accueil</button>
         <br>
-      <button type="submit" id="bouton2"><a href="panier.php">Panier</button>
+      <button type="submit" id="bouton2"><a href="connexion.php">Panier</button>
         <br>
       <button type="submit" id="bouton3"><a href="souscription.php">Inscription</button>
         <br>
