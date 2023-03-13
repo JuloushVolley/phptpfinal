@@ -24,18 +24,14 @@
                $id=$_POST['id'];
                               
            
-               $requete='SELECT * FROM film where id = :id';
+               $requete='SELECT * FROM panier';
                $exec=$db->prepare($requete);
-               $exec->execute(["id" => $id]) ;
+               $exec->execute() ;
                $users= $exec ->fetchall();
                foreach ($id as $ids) {
                 echo $user['id'];
                 echo '<br>';
                 echo $user['name'];
-                echo '<br>';
-                echo $user['description'];
-                echo '<br>';
-                echo $user['realisateur'];
                 echo '<br>';
                 echo $user['type'];
                 echo '<br>';
