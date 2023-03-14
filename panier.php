@@ -22,22 +22,83 @@
            {
                
                $id=$_POST['id'];
-                              
-           
-               $requete='SELECT * FROM panier';
-               $exec=$db->prepare($requete);
-               $exec->execute() ;
-               $users= $exec ->fetchall();
-               foreach ($id as $ids) {
-                echo $user['id'];
-                echo '<br>';
-                echo $user['name'];
-                echo '<br>';
-                echo $user['type'];
-                echo '<br>';
-                echo $user['prix'];
-                echo '<br>';
-               }
+            if ($id==1){
+
+            }
+            elseif($id==2){
+
+            }
+            elseif($id==3){
+              
+            }
+            elseif($id==4){
+              
+            }
+            elseif($id==5){
+              
+            }
+            elseif($id==6){
+              
+            }
+            elseif($id==7){
+              
+            }
+            elseif($id==8){
+              
+            }
+            elseif($id==9){
+              
+            }
+            elseif($id==10){
+              
+            }
+            elseif($id==11){
+              
+            }
+            elseif($id==12){
+              
+            }
+            elseif($id==13){
+              
+            }
+            elseif($id==14){
+              
+            }
+            elseif($id==15){
+              
+            }
+            elseif($id==16){
+              
+            }
+            elseif($id==17){
+              
+            }
+            elseif($id==18){
+              
+            }
+            elseif($id==19){
+              
+            }
+            elseif($id==20){
+              
+            }
+            elseif($id=='fini'){
+              $requete21='SELECT * FROM panier';
+              $exec21=$db->prepare($requete21);
+              $exec21->execute() ;
+              $users= $exec ->fetchall();
+              foreach ($users as $user) {
+               echo $user['id'];
+               echo '<br>';
+               echo $user['name'];
+               echo '<br>';
+               echo $user['type'];
+               echo '<br>';
+               echo $user['prix'];
+               echo '<br>';
+              }
+            }
+               
            };
     ?>
     <form>
