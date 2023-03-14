@@ -30,7 +30,7 @@
     <form>
       <button type="submit" id="bouton1"><a href="film.php" >film</button>
         <br>
-      <button type="submit" id="bouton2"><a href="panier.php">panier</button>
+      <button type="submit" id="bouton2"><a href="connexion.php">panier</button>
         <br>
       <button type="submit" id="bouton3"><a href="souscription.php">souscription</button>
         <br>
