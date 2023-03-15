@@ -38,7 +38,7 @@
         padding: 10px;
         border: none;
         border-radius: 4px;
-        background-color: red;
+        background-color: #66B2FF;
         color: white;
         cursor: pointer;
         font-size: 16px;
@@ -106,10 +106,10 @@
           Bonjour veuilleiez renseigner vous coorodonnées.
         </p>
         <div class="button.group">
-          <button type="submit" id="b2"><a href="film.php" >film</button>
-          <button type="submit" id="b2"><a href="panier.php">panier</button>
-          <button type="submit" id="b2"><a href="Accueil.html">accueil</button>
-          <button type="submit" id="b2"><a href="desouscription.php">désinscription</button>
+          <button type="submit" id="b2"><a href="film.php" >Film</button>
+          <button type="submit" id="b2"><a href="panier.php">Panier</button>
+          <button type="submit" id="b2"><a href="Accueil.html">Accueil</button>
+          <button type="submit" id="b2"><a href="desouscription.php">Désinscription</button>
         </div>
   </body>
 </html>
