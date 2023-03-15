@@ -8,7 +8,7 @@
   <body>
     <p id="p1">
       Bonjour madame, monsieur ,<br />
-      Bienvenu sur le panier, ici vous aller donner le chiffre du film et on affichera votre panier au fur et à mesure<br>
+      Bienvenu sur le panier, ici vous aller donner le chiffre du film et on affichera votre panier <br>
     </p>
     <p>
       <form action="panier.php" method="POST">
@@ -126,6 +126,8 @@
               $exec1->execute(["id"=>$id,"name"=>"Treize vies","type"=>"drama","prix"=>"5.99"]) ;
             }
             elseif($id == 'afficher'){
+              $nbr=0;
+              $somme=0;
               $requete='SELECT * FROM panier';
               $exec=$db->prepare($requete);
               $exec->execute() ;
@@ -138,7 +140,12 @@
                 echo $user['prix'];
                 echo '<br>';
                 echo '<br>';
+                $nbr=$nbr+1;
+
               }
+              $somme=$nbr*5.99;
+              echo "Ca vous fera ";
+              echo $somme;
             }
                
            };
