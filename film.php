@@ -3,7 +3,53 @@
   <head>
     <title>Page d'accueil</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="tpfinal.css" />
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th, td {
+        text-align: left;
+        padding: 8px;
+      }
+
+      th {
+        background-color: #4CAF50;
+        color: white;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      #b2 {
+          width: 20%;
+          padding: 10px;
+          border: none;
+          border-radius: 4px;
+          background-color: red;
+          color: white;
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: bold;
+          margin-right: 10px;
+      }
+      .button-group {
+        display: flex; 
+      }
+      #b3 {
+          width: 20%;
+          padding: 10px;
+          border: none;
+          border-radius: 4px;
+          background-color:green;
+          color: white;
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: bold;
+          margin-right: 10px;
+      }
+    </style>
   </head>
   <body>
     <p id="p1">
@@ -13,7 +59,7 @@
     </p>
     <p>
     <form >
-      <button type="submit" id="bouton"><a href="drama.html" >Drama</a></button>
+      <button type="submit" id="b3"><a href="drama.html" >Drama</a></button>
         <br>
     </form>
     <table class='tab'>
@@ -114,15 +160,12 @@
     
     </p>
   <p>
-    <form >
-      <button type="submit" id="bouton1"><a href="Accueil.html" >Accueil</button>
-        <br>
-      <button type="submit" id="bouton2"><a href="panier.php">Panier</button>
-        <br>
-      <button type="submit" id="bouton3"><a href="souscription.php">Inscription</button>
-        <br>
-      <button type="submit" id="bouton4"><a href="desouscription.php">Désinscription</button>
-    </form>
+    <div class="button.group">
+      <button type="submit" id="b2"><a href="Accueil.html" >Accueil</button>
+      <button type="submit" id="b2"><a href="panier.php">Panier</button>
+      <button type="submit" id="b2"><a href="souscription.php">Inscription</button>
+      <button type="submit" id="b2"><a href="desouscription.php">Désinscription</button>
+    </div>
     </p>
   </body>
 </html>
