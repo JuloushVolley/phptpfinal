@@ -3,11 +3,52 @@
     <head>
         <title>titre</title>
         <meta charset="utf-8" />
-        <link rel="stylesheet" type="text/css" href="tpfinal.css" />
+        <style>
+        #form1 {
+        max-width: 500px;
+        margin: 0 auto;
+        }
+        input[name="pseudo"] {
+          display: block;
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 20px;
+          border: none;
+          border-radius: 4px;
+          background-color: #f3f3f3;
+        }
+        #b1 {
+          display: block;
+          width: 100%;
+          padding: 10px;
+          border: none;
+          border-radius: 4px;
+          background-color: #4caf50;
+          color: white;
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        #b2 {
+          width: 20%;
+          padding: 10px;
+          border: none;
+          border-radius: 4px;
+          background-color: red;
+          color: white;
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: bold;
+          margin-right: 10px;
+        }
+        .button-group {
+          display: flex; 
+        }
+      </style>
     </head>
     <form action="desouscription.php" method="POST">
-            <input name="pseudo">
-            <button type="submit">désinscription</button>
+            <input name="pseudo" value="pseudo"  id="f1">
+            <button type="submit" id="b1">désinscription</button>
         </form>
     <body>
         <p>
@@ -27,14 +68,11 @@
                             }
 
             ?>
-    <form>
-      <button type="submit" id="bouton1"><a href="film.php" >film</button>
-        <br>
-      <button type="submit" id="bouton2"><a href="connexion.php">panier</button>
-        <br>
-      <button type="submit" id="bouton3"><a href="souscription.php">souscription</button>
-        <br>
-      <button type="submit" id="bouton4"><a href="Accueil.html">Accueil</button>
-    </form>
+    <div class="button.group">
+      <button type="submit" id="b2"><a href="film.php" >film</button>
+      <button type="submit" id="b2"><a href="connexion.php">panier</button>
+      <button type="submit" id="b2"><a href="souscription.php">souscription</button>
+      <button type="submit" id="b2"><a href="Accueil.html">Accueil</button>
+     </div>                     
   </body>
 </html>
