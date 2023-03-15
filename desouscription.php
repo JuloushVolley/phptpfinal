@@ -34,7 +34,7 @@
           padding: 10px;
           border: none;
           border-radius: 4px;
-          background-color: red;
+          background-color: #66B2FF;
           color: white;
           cursor: pointer;
           font-size: 16px;
@@ -46,13 +46,13 @@
         }
       </style>
     </head>
-    <form action="desouscription.php" method="POST">
+    <form action="desouscription.php" method="POST" id="form1">
             <input name="pseudo" value="pseudo"  id="f1">
-            <button type="submit" id="b1">désinscription</button>
+            <button type="submit" id="b1">Désinscription</button>
         </form>
     <body>
         <p>
-        Cette page sert a les désincription du site.
+        Cette page sert à la désinscription du site.
         <br/>
         <br/> 
         <p>
@@ -69,9 +69,9 @@
 
             ?>
     <div class="button.group">
-      <button type="submit" id="b2"><a href="film.php" >film</button>
-      <button type="submit" id="b2"><a href="connexion.php">panier</button>
-      <button type="submit" id="b2"><a href="souscription.php">souscription</button>
+      <button type="submit" id="b2"><a href="film.php" >Film</button>
+      <button type="submit" id="b2"><a href="connexion.php">Panier</button>
+      <button type="submit" id="b2"><a href="souscription.php">Souscription</button>
       <button type="submit" id="b2"><a href="Accueil.html">Accueil</button>
      </div>                     
   </body>
