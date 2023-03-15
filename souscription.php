@@ -19,7 +19,7 @@
                     {
                         $pseudo=$_POST['pseudo'];
                         $mail=$_POST['mail'];
-                        $mdp=password_hash($_POST['mdp'],PASSWORD_DEFAULT);
+                        $mdp=$_POST['mdp'];
                         $telephone=$_POST['telephone'];
                     
                     
@@ -31,6 +31,7 @@
                             echo "le pseudo existe déja";
                     }
                     else{
+                            $mdp=password_hash($mdp,PASSWORD_BCRYPT);
                             $requete1="INSERT INTO users (pseudo,mail,mdp,telephone) VALUE (:pseudo,:mail,:mdp,:telephone)";
                             $exec1=$db->prepare($requete1);
                             $exec1->execute(["pseudo"=>$pseudo,"mail"=>$mail,"mdp"=>$mdp,"telephone"=>$telephone]) ;
