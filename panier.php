@@ -3,18 +3,91 @@
   <head>
     <title>Page d'accueil</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="tpfinal.css" />
+    <style>
+      #form1 {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+      input[name="id"]{
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: #f3f3f3;
+      }
+      #b1 {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      #b2 {
+          width: 20%;
+          padding: 10px;
+          border: none;
+          border-radius: 4px;
+          background-color: #66B2FF;
+          color: white;
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: bold;
+          margin-right: 10px;
+      }
+      .button-group {
+        display: flex; 
+      }
+      
+      #b3 {
+          width: 20%;
+          padding: 10px;
+          border: none;
+          border-radius: 4px;
+          background-color:green;
+          color: white;
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: bold;
+          margin-right: 10px;
+      }
+      #b4 {
+          width: 25%;
+          padding: 10px;
+          border: none;
+          border-radius: 4px;
+          background-color:green;
+          color: white;
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: bold;
+          margin-right: 10px;
+      }
+    </style>
   </head>
   <body>
     <p id="p1">
       Bonjour madame, monsieur ,<br />
-      Bienvenu sur le panier, ici vous aller donner le chiffre du film et on affichera votre panier <br>
+      Bienvene sur le panier, ici vous allez donner le chiffre du film et on affichera votre panier. <br>
+      Lorsque que vous avez fini de rentrer les films et que vous voulez les ou le supprimer aller sur la page Suppression qui sera sur le page Panier.<br>
+      Pour voir vos films il faut que vous complétez avec le mot <b>afficher</b> dans la zone de texte.<br>
     </p>
     <p>
-      <form action="panier.php" method="POST">
-            <input name="id">
-            <button type="submit" name="send">ajouter</button>
+      <form action="panier.php" method="POST" id="form1">
+            <input name="id" value="id" id="f1">
+            <button type="submit" name="send" id="b3">ajouter</button>
       </form>
+      <br>
+      <form id="form1">
+      <button type="submit" id="b4"><a href="suppression.php" >Suppression</a></button>
+        <br>
+    </form>
     </p>
     <?php
       $db = new PDO("mysql:host=localhost;dbname=tpfinal",'root','');
@@ -150,14 +223,11 @@
                
            };
     ?>
-    <form>
-      <button type="submit" id="bouton1"><a href="film.php" >Film</button>
-        <br>
-      <button type="submit" id="bouton2"><a href="Accueil.html">Accueil</button>
-        <br>
-      <button type="submit" id="bouton3"><a href="souscription.php">Inscription</button>
-        <br>
-      <button type="submit" id="bouton4"><a href="desouscription.php">Désinscription</button>
-    </form>
+    <div class="button.group">
+      <button type="submit" id="b2"><a href="film.php" >Film</button>
+      <button type="submit" id="b2"><a href="Accueil.html">Accueil</button>
+      <button type="submit" id="b2"><a href="souscription.php">Inscription</button>
+      <button type="submit" id="b2"><a href="desouscription.php">Désinscription</button>
+          </div>
   </body>
 </html>
