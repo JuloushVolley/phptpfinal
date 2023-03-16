@@ -65,7 +65,7 @@
                             $exec2=$db->prepare($requete2);
                             $exec2->execute(["pseudo"=>$user]) ;
                             
-                            }
+                      }
 
             ?>
     <div class="button.group">
