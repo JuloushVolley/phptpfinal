@@ -76,7 +76,7 @@
       Bonjour madame, monsieur ,<br />
       Bienvene sur le panier, ici vous allez donner le chiffre du film et on affichera votre panier. <br>
       Lorsque que vous avez fini de rentrer les films et que vous voulez les ou le supprimer aller sur la page Suppression qui sera sur le page Panier.<br>
-      Pour voir vos films il faut que vous complétez avec le mot <b>afficher</b> dans la zone de texte.<br>
+      On affichera vos films aux fur et à mesure que vous mettiez dans votre panier et on affiche le prix totale de tous vos films choisi.<br>
     </p>
     <p>
       <form action="panier.php" method="POST" id="form1">
@@ -198,7 +198,7 @@
               $exec1=$db->prepare($requete1);
               $exec1->execute(["id"=>$id,"name"=>"Treize vies","type"=>"drama","prix"=>"5.99"]) ;
             }
-            elseif($id == 'afficher'){
+            
               $nbr=0;
               $somme=0;
               $requete='SELECT * FROM panier';
@@ -206,6 +206,8 @@
               $exec->execute() ;
               $users= $exec ->fetchall();
               foreach ($users as $user) {
+                echo $user['id'];
+                echo '<br>';
                 echo $user['name'];
                 echo '<br>';
                 echo $user['type'];
@@ -219,7 +221,7 @@
               $somme=$nbr*5.99;
               echo "Ca vous fera ";
               echo $somme;
-            }
+            
                
            };
     ?>
