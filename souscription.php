@@ -86,16 +86,7 @@
                             $exec2=$db->prepare($requete2);
                             $exec2->execute() ;
                             $users2= $exec2 ->fetchall();
-                            foreach ($users2 as $user2) {
-                                echo $user2['pseudo'];
-                                echo '<br>';
-                                echo $user2['mail'];
-                                echo '<br>';
-                                echo $user2['mdp'];
-                                echo '<br>';
-                                echo $user2['telephone'];
-                                echo '<br>';
-                             }
+                            echo "votre inscription est réussi bienvenu sur notre site";
                     
                         
                     }
@@ -103,7 +94,7 @@
     
             ?>
         <p id="p1">
-          Bonjour veuilleiez renseigner vous coorodonnées.
+          Bonjour veuilliez renseigner vous coorodonnées.
         </p>
         <div class="button.group">
           <button type="submit" id="b2"><a href="film.php" >Film</button>
