@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Page d'accueil</title>
+    <title>Film-Action</title>
     <meta charset="utf-8" />
     <style>
       table {
