@@ -96,36 +96,38 @@
            {
                
             $id=$_POST['id'];
-            
-            if($id == 'afficher'){
-                $nbr=0;
-                $somme=0;
-                $requete='SELECT * FROM panier';
-                $exec=$db->prepare($requete);
-                $exec->execute() ;
-                $users= $exec ->fetchall();
-                foreach ($users as $user) {
-                  echo $user['name'];
-                  echo '<br>';
-                  echo $user['type'];
-                  echo '<br>';
-                  echo $user['prix'];
-                  echo '<br>';
-                  echo '<br>';
-                  $nbr=$nbr+1;
-  
-                }
-                $somme=$nbr*5.99;
-                echo "Ca vous fera ";
-                echo $somme;
-            }
-            // else{
-              
-            //   $requete1='DELETE FROM panier WHERE id = :id';
-            //   $exec1=$db->prepare($requete1);
-            //   $exec1->execute(["id"=>$id]) ;
 
-            // }
+            if($id>=1 && $id<=20){
+              
+              $requete2='DELETE FROM panier WHERE id = :id ';
+              $exec2=$db->prepare($requete2);
+              $exec2->execute(["id"=>$id]) ;
+
+            }
+            
+            
+            elseif($id == 'afficher'){
+              $nbr=0;
+              $somme=0;
+              $requete='SELECT * FROM panier';
+              $exec=$db->prepare($requete);
+              $exec->execute() ;
+              $users= $exec ->fetchall();
+              foreach ($users as $user) {
+                echo $user['name'];
+                echo '<br>';
+                echo $user['type'];
+                echo '<br>';
+                echo $user['prix'];
+                echo '<br>';
+                echo '<br>';
+                $nbr=$nbr+1;
+
+              }
+              $somme=$nbr*5.99;
+              echo "Ca vous fera ";
+              echo $somme;
+          }
 
 
                
