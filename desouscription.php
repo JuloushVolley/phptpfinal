@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>titre</title>
+        <title>Désinscription</title>
         <meta charset="utf-8" />
         <style>
         #form1 {
